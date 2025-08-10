@@ -23,6 +23,15 @@ public class UserModel {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private boolean verified = false;
+
+    @Column(name = "verification_token")
+    private String verificationToken;
+
+    @Column(name = "verification_token_expiry")
+    private LocalDateTime verificationTokenExpiry;
+
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
